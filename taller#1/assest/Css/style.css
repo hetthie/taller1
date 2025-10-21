@@ -1,0 +1,95 @@
+/*
+--En Css tenemos varios tipos de selector.
+
+Estructura básica de Css
+Selector{
+    linea al final;
+    propiedad: valor;
+    propiedad: valor;
+    propiedad: valor;
+    Css No distingue entre mayúscula/Minúscula en propiedades.
+    Se se ve la diferencia entre mayúscula/Minúscula en el nombre del file.Css
+    style.css
+    STYLE.css
+}
+
+1.-Selecto de elemento (selector de etiqueta)
+Solo requiere que se indique cual es la etiqueta HTML que se desea aplicar con diseño
+
+
+body {
+    
+}
+
+h1 {
+    
+}
+
+h3 {
+    
+}
+
+h4 {
+    
+}
+
+p {
+    
+}
+
+2.-Selector de clase (inicia con un punto)
+-Mayoria de framework usan este tipo de selector
+-Son al inicio de la etiqueta/selector en CSS inicia con un punto, es una selector de clase
+-Los selectores de clase son de su propia imaginación
+
+CSS:
+.Titulo {
+    
+}
+
+.Cuerpo {
+    
+}
+
+.Ficha {
+    
+}
+
+HTML:
+<p class="Cuerpo"> texto que aparece en pantalla </p>
+
+Debe ser el mismo que se puso en HTML y en CSS
+diferencias:
+    -Varios elementos/etiquetas HTML pueden aplicar la misma clase
+
+
+3.-Selector ID (se antepone el #)
+-Cuando se asigna/relaciona con un ID unico a una etiqueta/elemento HTML
+
+CSS:
+#Titulo {
+    
+}
+
+#Cuerpo {
+    
+}
+
+#Ficha {
+    
+}
+
+HTML:
+<p id="Cuerpo"> texto que aparece en pantalla </p>
+
+Diferencias:
+    -Solo un elemento/etiqueta HTML puede aplicar esa clase
+
+
+4.-selector combinado (donde especifica la etiqueta HTML por niveles)
+
+*/
+
+p{
+	background: gray;
+}
