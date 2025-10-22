@@ -171,6 +171,13 @@ button{
 	border-radius:5px;
 	font-weight:bold;
 	cursor:pointer;
+	transition:; 
+}
+
+nav a:hover{
+	background:white;
+	color:black;
+	border-radius:5px;
 	
 }
 button:hover{
@@ -181,4 +188,54 @@ button:hover{
 .btn{
 	background:yellow;
 	color:blue;
+}
+
+h1,h2, h3{
+	margin-bottom:20px;
+	color:#f54927;
+}
+
+h1{
+	text-align:center;
+	color:red;
+	text-transform:uppercase;
+	text-decoration: underline;
+    animation: aparecer 2s ease-out;
+	
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.resalta{
+	color: #003366;
+    font-weight: bold;
+    background: #d8e4f5;
+    padding: 5px 10px;
+    border-left: 4px solid #003366;
+}
+
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+
+/*ejemplos responsive*/
+@media (max-width: 768px) {
+    body {
+        background: yellow;
+    }
+}
+
+/* Ejemplo para pantallas más pequeñas (mobile) */
+@media (max-width: 480px) {
+    body {
+        background: red;
+    }
 }
