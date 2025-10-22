@@ -89,7 +89,96 @@ Diferencias:
 4.-selector combinado (donde especifica la etiqueta HTML por niveles)
 
 */
+/*reset basico*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+	max-width:90%;
+	margin:50px;
+	padding:0px;
+	/*text-align: center;*/
+}
 
-p{
-	background: gray;
+/*fuente externa*/
+.bbh-sans-bogle-regular {
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/*reset basico*/
+body {
+    font-family: "Comic Sans MS", "Montserrat", sans-serif;
+    background: linear-gradient(135deg, #a8e6cf 0%, #7ec8a3 100%);
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background: blue;
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav a {
+	color:white;
+	text-decoration:none;
+	margin:0 8px;
+	padding:5px 8px;
+	transition:background 0.3s;
+}
+nav{
+	
+	text-align:center;
+	
+}
+
+.caja {
+    background: #D3D3D3;
+    width: 30%;
+    padding: 5px;
+    border: 5px solid blue;
+    margin: 10px;
+	justify-content:center;
+	text-align:center;
+}
+
+.Comportamiento{
+	display:flex;
+	background:lightblue;
+	margin:10px;
+	padding:5px;
+	justify-content:center;
+}
+
+
+
+button{
+	padding:10px,20px;
+	margin:10px;
+	border:none;
+	background:#003366;
+	color:white;
+	
+	border-radius:5px;
+	font-weight:bold;
+	cursor:pointer;
+	
+}
+button:hover{
+	background:#0055a5;
+	transform:scale(1.05);
+}
+
+.btn{
+	background:yellow;
+	color:blue;
 }
