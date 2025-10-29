@@ -1,7 +1,10 @@
-window.addEventListener("DOMContentLoaded", function(){
-	const Btn = document.getElementById("IdContrl");
-	Btn.addEventListener("click", function(){
-		let Lv_Mensaje_3 = "este mensaje se muestra al presionar el boton: presioname3";
-		alert(Lv_Mensaje_3);
-	});
-});
+/* Comentariors */
+/*--------------------*/
+let Lv_Mensaje_1 = "Este es mi Cuarto mensaje Alert - Externo - Antes del Body";
+alert(Lv_Mensaje_1);
+
+/*--------------------*/
+function mostrarAlert(){
+    let Lv_Mensaje_2 = "Este mensaje se muestra al presionar el botón: Presioname2 - Script Externo";
+    alert(Lv_Mensaje_2);
+}
