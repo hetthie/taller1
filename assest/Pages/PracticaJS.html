@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Prácticas de HTML, CSS, JS">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="author" content="xelula">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Practicas JavaScript</title>
+	<link rel= "icon" href= "../img/icon/Pokemon/Abra.ico" >
+	<script src="../Js/JavaScript.js"></script>
+	<!-- PUEDE EJECUTARSE EN CUALQUIER PARTE ANTES/DENTRO/FUERA DEL BODY--->
+	<!---SCRIPT ANTES DEL BODY -  INTERNO -->
+	<script>
+		alert("este es mi primer mensaje alert entes de body");
+	</script>
+	<!---SCRIPT ANTES DEL BODY - FILE EXTERNO -->
+	
+</head>
+<body>
+	<!---SCRIPT dentro DEL BODY -  INTERNO -->
+	<script>
+		alert("este es mi segundo mensaje alert dentro de body");
+	</script>
+	<hr>
+		<nav>
+				<a href="../../index.html">Inicio</a> / 
+				<a href="PracticaTexto.html">Practica de texto</a> / 
+				<a href="https://sites.google.com/fiec.espol.edu.ec/barrenoherrera/fiec">Practica de Builder (Google Site)</a> / 
+				<a href="https://ambh.my.canva.site/turismo-responsable">Practica de Canva (Link a Canva)</a> / 
+				<a href="IA/cafeteria-artesanal/index.html">Practica de Inteligencia Artificial</a> / 
+				<a href="PracticaListas.html">Practica de Listas</a> / 
+				<a href="PracticaImg.html">Practica de Imágenes</a> / 
+				<a href="PracticaAudio.html">Practica de Audio</a> / 
+				<a href="PracticaVideo.html">Practica de Video</a> / 
+				<a href="PracticaTablas.html">Practica de Tablas</a> / 
+				<a href="PracticaCSS.html">Practica de CSS</a> / 
+				<a href="../CopyPaste/index.html">Practica de Copy Paste (Plantilla)</a> / 
+				<a href="PracticaJS.html">Practica de JavaScript</a> /
+				<a href="PracticaControles.html">Practica de Controles</a> /
+				<a href="PracticaFormulario.html">Practica de Formularios</a> / 
+		</nav>
+	<hr>
+	<main>
+		<h1>Practica de JavaScript</h1>
+		<section>
+			<P>JAVASCRIPT ES UN LENGUAJE DE PROGRAMACION QUE SE EJECUTA TANTO EN EL FRONT COMO EN EL BACKEND</P>
+			<P>JAVASCRIPT LO USAMOS EN VARIOS FRAMeWORK</P>
+			<ol>
+				<LI>REACT JS</LI>
+				<LI>VUE JS</LI>
+				<LI>ANGULAR JS</LI>
+				<LI>Svelte/sveltekit</LI>
+				<LI>NEXT JS</LI>
+				<LI>nuxt.js</LI>
+				<LI>Astro</LI>
+			</ol>
+		</section>
+
+		<hr>
+
+		<section>
+			<P>Para programar en JavaScript hara uso de sus conocimiento de programacion (basica / intermedia/ avanzada)
+				<br>
+				Variables: locales, globales, estaticas/constantes<br>
+				Estructuras de control (if/else)<br>
+				Bucles (for, while)<br>
+				Funciones (declaracion, expresion, flecha)<br>
+			</P>
+		</section>
+		<section>
+			<h3>Tipos de variables</h3>
+			<ul>
+				<li>let: locales -  dentro de una funcion o bloque</li>
+				<li>var: globales - las podemos usar en cualqueir parte del desarrollo</li>
+				<li>const: son variables con valores fijos, que no pueden cambiar de valor durante su ejecusion</li>
+			</ul>
+			
+		</section>
+
+		<section>
+			<h3>Tipos de datos </h3>
+			<ul>
+				<li>String: caracteres alfanumericos</li>
+				<li>number: valores numericos</li>
+				<li>Booleano: t/f</li>
+				<li>Arrays: listas (Elementos )</li>
+				<li>Objects: Diccionarios</li>
+				<li>Null - Valor indefinido</li>
+			</ul>
+			
+		</section>
+
+		<section>
+			<h3>programacion jAVASCRIPT</h3>
+			<ul>
+				<li>Condiciones: if/else</li>
+				<li>Estructura: Switch</li>
+				<li>for.. of - para recorrer colecciones (arrays)</li>
+				<li>for..in - para recorrer object/dicc (clave) </li>
+			</ul>
+				
+		</section>
+
+		<section>
+			<h3>momento  - lugar cuando se ejecuta JS</h3>
+			<ul>
+				<li>Script dentro del HTML - script enbebido en medio del HTML - (INLIEN SCRIPT EARLY)</li>
+				<li>Script dentro de un control - Uso de los atributos en elementos HTML - (INLIEN EVENTOS HANDLER) </li>
+				<li>Script al final (antes de cerrar el body) - Script enbebido al final antes del body</li>
+				<li>Archivo externo (.js) - vinculado al HTML - (Extrenal Script)</li>
+			</ul>
+				
+		</section>
+
+
+		<section>
+			<h3>Prueba de ejecucion momento</h3>
+			<ul>
+				<li>Script dentro del HTML - script enbebido en medio del HTML - (INLIEN SCRIPT EARLY)
+					<script>
+						document.write("Este es mi primer mensaje generado por document.write");
+						
+					</script>
+
+				</li>
+
+				<li>Script dentro de un control - Uso de los atributos en elementos HTML - (INLIEN EVENTOS HANDLER) 
+
+					<button onclick="alert('Script ejecutado dentro de un control (boton)')">Presione 1</button>
+				</li>
+
+				<li>Script al Final - (Inline Script Late)
+  					<button id="BtnPresioname2" ondblclick="mostrarAlert">Presioname 2</button>
+				</li>
+					
+				</li>
+				<li>Archivo externo (.js) - vinculado al HTML - (Extrenal Script)</li>
+			</ul>
+				
+		</section>
+
+
+		<section>
+			<h3>Metodos delacionados</h3>
+			<ul>
+				<li></li>
+				<li> </li>
+				<li></li>
+				<li></li>
+			</ul>
+				
+		</section>
+
+
+		<section>
+			<h3>Eventos progamables Js dentro de una pag web</h3>
+			<ul>
+				<li>load
+					<p>Definicion: El evento que se dispara cuando toda la página ha terminado de cargar completamente, incluyendo imágenes, estilos y scripts.<br>
+						Este evento sirve para: Ejecutar código cuando todos los recursos de la página están listos.<br>
+						Funciona como: Un indicador de que la página está completamente cargada y lista para interactuar.<br>
+						Se hace: window.addEventListener('load', function() { /* código */ });<br>
+						No se hace: Confundirlo con DOMContentLoaded (que se dispara antes, solo cuando el HTML está parseado).<br>
+					</p>
+				</li>
+				<li>unload
+					<p>Definicion: El evento que se dispara cuando el usuario está a punto de abandonar la página.<br>
+						Este evento sirve para: Realizar acciones de limpieza cuando el usuario sale de la página.<br>
+						Funciona como: Una notificación de que el usuario está dejando la página actual.<br>
+						Se hace: window.addEventListener('unload', function() { /* limpieza */ });<br>
+						No se hace: Intentar prevenir que el usuario salga de la página o mostrar alertas (no es confiable en navegadores modernos).<br>
+					</p>
+				</li>
+				<li>beforeunload
+					<p>Definicion: El evento que se dispara justo antes de que la página se descargue, permitiendo advertir al usuario.<br>
+						Este evento sirve para: Mostrar una confirmación antes de que el usuario abandone la página con cambios sin guardar.<br>
+						Funciona como: Un punto de confirmación antes de cerrar o recargar la página.<br>
+						Se hace: window.addEventListener('beforeunload', function(e) { e.preventDefault(); e.returnValue = ''; });<br>
+						No se hace: Personalizar el mensaje (los navegadores modernos usan mensajes predeterminados por seguridad).<br>
+					</p>
+				</li>
+				<li>visibilitychange
+					<p>Definicion: El evento que se dispara cuando la pestaña o ventana del navegador cambia entre visible y oculta.<br>
+						Este evento sirve para: Detectar cuando el usuario cambia de pestaña o minimiza el navegador.<br>
+						Funciona como: Un interruptor que notifica cambios en la visibilidad de la página.<br>
+						Se hace: document.addEventListener('visibilitychange', function() { if(document.hidden) { /* pausar */ } });<br>
+						No se hace: Usarlo para rastrear usuarios de forma invasiva o para bloquear funcionalidad cuando la pestaña está oculta.<br>
+					</p>
+				</li>
+				<li>readystatechange
+					<p>Definicion: El evento que se dispara cuando el estado de carga del documento cambia (loading, interactive, complete).<br>
+						Este evento sirve para: Monitorear las diferentes etapas de carga del documento.<br>
+						Funciona como: Un indicador del progreso de carga del documento con tres estados posibles.<br>
+						Se hace: document.addEventListener('readystatechange', function() { console.log(document.readyState); });<br>
+						No se hace: Usarlo en lugar de DOMContentLoaded o load para casos simples (es más complejo de lo necesario).<br>
+					</p>
+				</li>
+				<li>selectionchange + fullscreenchange + fullscreenerror
+					<p>Definicion: Eventos relacionados con la selección de texto, cambios de pantalla completa y errores de pantalla completa.<br>
+						Este evento sirve para: selectionchange detecta cuando cambia el texto seleccionado; fullscreenchange detecta entrada/salida de pantalla completa; fullscreenerror detecta errores al intentar pantalla completa.<br>
+						Funciona como: Notificadores de cambios en la selección del usuario y en el modo de visualización.<br>
+						Se hace: document.addEventListener('selectionchange', function() { /* código */ }); document.addEventListener('fullscreenchange', function() { /* código */ });<br>
+						No se hace: Abusar de selectionchange (se dispara frecuentemente), ni forzar pantalla completa sin interacción del usuario.<br>
+					</p>
+				</li>
+				<li>copy, cut, paste
+					<p>Definicion: Eventos que se disparan cuando el usuario copia, corta o pega contenido en la página.<br>
+						Este evento sirve para: Interceptar y modificar operaciones de portapapeles o agregar funcionalidad personalizada.<br>
+						Funciona como: Interceptores de las acciones del portapapeles del usuario.<br>
+						Se hace: document.addEventListener('copy', function(e) { e.clipboardData.setData('text/plain', 'texto personalizado'); e.preventDefault(); });<br>
+						No se hace: Bloquear completamente estas acciones (frustra a los usuarios) o robar información del portapapeles sin consentimiento.<br>
+					</p>
+				</li>
+				<li>pointerlockchange
+					<p>Definicion: El evento que se dispara cuando el cursor del mouse es bloqueado o desbloqueado en un elemento.<br>
+						Este evento sirve para: Detectar cambios en el bloqueo del puntero, útil para juegos y aplicaciones 3D.<br>
+						Funciona como: Un notificador de cuando se activa o desactiva el control total del mouse.<br>
+						Se hace: document.addEventListener('pointerlockchange', function() { if(document.pointerLockElement) { /* bloqueado */ } });<br>
+						No se hace: Bloquear el puntero sin una clara indicación al usuario o sin proporcionar una forma fácil de salir.<br>
+					</p>
+				</li>
+				<li>scroll
+					<p>Definicion: El evento que se dispara cuando el usuario desplaza la página o un elemento con scroll.<br>
+						Este evento sirve para: Detectar el desplazamiento y ejecutar acciones como cargar más contenido o mostrar/ocultar elementos.<br>
+						Funciona como: Un detector continuo de movimiento de scroll que se dispara múltiples veces.<br>
+						Se hace: document.addEventListener('scroll', function() { /* código con throttling/debouncing */ });<br>
+						No se hace: Ejecutar operaciones pesadas sin optimización (usar throttle o debounce), ya que se dispara muy frecuentemente.<br>
+					</p>
+				</li>
+			</ul>
+				
+		</section>
+	</main>
+	<footer>
+		<p>Desarrollado por: Andie</p>
+		<p>
+			<a href="mailto:abarreno@espol.edu.ec">Correo</a> / 
+			<a href="tel:+593980857--">Teléfono Celular</a>
+		</p>
+		<p>&copy; 2025 Página de prácticas académicas ESPOL</p>
+	</footer>
+	<!---SCRIPT dentro DEL BODY -  INTERNO -->
+	<script>
+		alert("este es mi tercer mensaje alert despues de body");
+		document.write("Este es mi primer mensaje generado por document.write");
+	</script>
+	<hr>
+	
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Prácticas de HTML, CSS, JS">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="author" content="xelula">
+	<meta http-equiv="refresh" content="10">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Practicas JavaScript</title>
+	<link rel= "icon" href= "../img/icon/Pokemon/Abra.ico" >
+	<script src="../Js/jsFormulario.js"></script>
+	<!-- PUEDE EJECUTARSE EN CUALQUIER PARTE ANTES/DENTRO/FUERA DEL BODY--->
+	<!---SCRIPT ANTES DEL BODY -  INTERNO -->
+	<!--<script>
+		alert("este es mi primer mensaje alert entes de body");
+	</script>-->
+	<!---SCRIPT ANTES DEL BODY - FILE EXTERNO -->
+	
+</head>
+<body>
+	<!---SCRIPT dentro DEL BODY -  INTERNO -->
+	<!--<script>
+alert("este es mi segundo mensaje alert dentro de body");
+	</script>-->
+	<hr>
+		<nav>
+				<a href="../../index.html">Inicio</a> / 
+				<a href="PracticaTexto.html">Practica de texto</a> / 
+				<a href="https://sites.google.com/fiec.espol.edu.ec/barrenoherrera/fiec">Practica de Builder (Google Site)</a> / 
+				<a href="https://ambh.my.canva.site/turismo-responsable">Practica de Canva (Link a Canva)</a> / 
+				<a href="IA/cafeteria-artesanal/index.html">Practica de Inteligencia Artificial</a> / 
+				<a href="PracticaListas.html">Practica de Listas</a> / 
+				<a href="PracticaImg.html">Practica de Imágenes</a> / 
+				<a href="PracticaAudio.html">Practica de Audio</a> / 
+				<a href="PracticaVideo.html">Practica de Video</a> / 
+				<a href="PracticaTablas.html">Practica de Tablas</a> / 
+				<a href="PracticaCSS.html">Practica de CSS</a> / 
+				<a href="../CopyPaste/index.html">Practica de Copy Paste (Plantilla)</a> / 
+				<a href="PracticaJS.html">Practica de JavaScript</a> /
+				<a href="PracticaControles.html">Practica de Controles</a> /
+				<a href="PracticaFormulario.html">Practica de Formularios</a> / 
+		</nav>
+	<hr>
+	<main>
+		<h1>Practica de JavaScript</h1>
+		
+	<!-- 
+		fieldset: agrupa lógicamente un conjunto de controles
+		legend: es el título visible en el borde superior del conjunto
+		-->
+		<!--SIEMPRE INCLUIR UN ID Y QE ESTE SEA EL MISMO QUE EL NOMBRE PARA EVITAR PROBLEMAS CON EL FRAMEWORK-->
+		<fieldset>
+			<legend>Controles de Formulario en HTML</legend>
+			<form>
+				
+				<label for="btn">Botón:</label>
+				<input type="button" value="Click aquí" name="btn"><br><br>
+				
+				<fieldset>
+					<legend>Checkbox (selección múltiple)</legend>
+					<label><input type="checkbox" name="estado" value="op1"> Opción 1</label><br>
+					<label><input type="checkbox" name="estado" value="op2"> Opción 2</label><br>
+					<label><input type="checkbox" name="estado" value="op3"> Opción 3</label><br>
+				</fieldset><br>
+				
+				<label for="color">Color:</label>
+				<input type="color" name="color"><br><br>
+			
+				<label for="date">Date:</label>
+					<input type="date" name="date"><br><br>
+				<label for="datetime-local">Datetime-local:</label>
+					<input type="datetime-local" name="datetime-local"><br><br>
+				<label for="month">Month:</label>
+					<input type="month" name="month"><br><br>
+				<label for="week">Week:</label>
+					<input type="week" name="week"><br><br>
+				<label for="time">Time:</label>
+					<input type="time" name="time"><br><br>
+				<!-- Correo -->
+				<label for="email">Email:</label>
+					<input type="email" name="email" placeholder="nombre@dominio.com"><br><br>
+				<!-- Archivo -->
+				<label for="file">File:</label>
+					<input type="file" name="file"><br><br>
+				<!-- Hidden: no visible, pero útil para enviar datos fijos -->
+				<input type="hidden" name="hidden" value="valor_oculto">
+				<!-- Imagen -->
+				<label for="image">Image (como botón):</label>
+					<input type="image" src="../Img/Producto.png" alt="Enviar" width="50" height="50"><br><br>
+				<!-- Número -->
+				<label for="number">Number:</label>
+					<input type="number" name="number" min="0" max="100" step="5"><br><br>
+				<!-- Contraseña -->
+				<label for="password">Password:</label>
+					<input type="password" name="password"><br><br>
+				<!-- Radio: selección única -->
+				<fieldset>
+					<legend>Radio (selección única)</legend>
+					<label><input type="radio" name="opcion" value="r1"> Radio 1</label><br>
+					<label><input type="radio" name="opcion" value="r2"> Radio 2</label><br>
+					<label><input type="radio" name="opcion" value="r3"> Radio 3</label><br>
+				</fieldset><br>
+				<!-- Rango -->
+				<label for="range">Range:</label>
+					<input type="range" name="range" min="0" max="100"><br><br>
+				<!-- Reset -->
+				<input type="reset" value="Limpiar formulario"><br><br>
+				<!-- Search -->
+				<label for="search">Search:</label>
+					<input type="search" name="search" placeholder="Buscar..."><br><br>
+				<!-- Submit -->
+				<input type="submit" value="Enviar datos"><br><br>
+				<!-- Teléfono -->
+				<label for="tel">Tel:</label>
+					<input type="tel" name="tel" placeholder="+593"><br><br>
+				<!-- Texto -->
+				<label for="text">Text:</label>
+					<input type="text" name="text" placeholder="Ingrese texto aquí"><br><br>
+				<!-- URL -->
+				<label for="url">URL:</label>
+					<input type="url" name="url" placeholder="https://..."><br><br>
+				<!-- Select -->
+				<label for="select">Select (lista desplegable):</label>
+				<select name="select">
+					<option value="Valor 1">Valor 1</option>
+					<option value="Valor 2">Valor 2</option>
+					<option value="Valor 3">Valor 3</option>
+				</select>
+				<br><br>
+				<!-- Textarea -->
+				<label for="textarea">Textarea (multilínea):</label><br>
+				<textarea name="textarea" rows="4" cols="40" placeholder="Escriba un texto largo..."></textarea><br><br>
+				<!-- Datalist -->
+				<label for="datalist">Datalist (lista sugerida):</label>
+					<input list="opciones" name="datalist">
+				<datalist id="opciones">
+					<option value="HTML">
+					<option value="CSS">
+					<option value="JavaScript">
+					<option value="Python">
+				</datalist><br><br>
+				<!-- Progress -->
+				<label for="progress">Progress (progreso):</label>
+				<progress value="70" max="100"></progress><br><br>
+				<!-- Meter -->
+				<label for="meter">Meter (medidor):</label>
+				<meter value="0.7" min="0" max="1">70%</meter><br><br>
+			</form>
+		</fieldset>
+	<p> 2025 Pagina de practicas academicas Espol </p>
+	<footer>
+		<p>Desarrollado por: Andie</p>
+		<p>
+			<a href="mailto:abarreno@espol.edu.ec">Correo</a> / 
+			<a href="tel:+593980857--">Teléfono Celular</a>
+		</p>
+		<p>&copy; 2025 Página de prácticas académicas ESPOL</p>
+	</footer>
+	<!---SCRIPT dentro DEL BODY -  INTERNO -->
+	<!--<script>
+		alert("este es mi tercer mensaje alert despues de body");
+	</script>-->
+	<hr>
+	
+</body>
+</html>
