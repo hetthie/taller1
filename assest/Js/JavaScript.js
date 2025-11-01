@@ -35,5 +35,29 @@ window.addEventListener('DOMContentLoaded', function() {
         alert(Lv_Mensaje_4);
         });
     }
-    
+
+    const Lv_titulo = document.getElementById("idTitulo");
+    Lv_titulo.textContent ="Esta valido cambio por medio del: document.getElementById";
+    Lv_titulo.style.color ="red";
+
+    const Lv_items = document.getElementsByClassName("item");
+        for(let i=0; i< Lv_items.length; i++){
+            Lv_items[i].textContent = `metodo numero 2: este es el parrafo #${i+1}`;
+            Lv_items[i].style.fontWeight = 'bold';
+    }
+
+    const items = document.getElementsByTagName("p");
+        for(let i=0; i< items.length; i++){
+            items[i].style.border = '3px solid blue';
+    }
+
+    const ln_selector = document.querySelector("p");
+    ln_selector.style.backgroundColor = "yellow";
+
+
+    const ln_parrafos = document.querySelectorAll("div");
+    ln_parrafos.forEach(function(parrafo) {
+        parrafo.style.backgroundColor = "lightgray";
+    });
+
 });
