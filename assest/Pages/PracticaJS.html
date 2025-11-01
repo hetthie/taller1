@@ -9,11 +9,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Practicas JavaScript</title>
 	<link rel= "icon" href= "../img/icon/Pokemon/Abra.ico" >
-	<script src="../Js/JavaScript.js"></script>
+	<!---<script src="../Js/JavaScript.js"></script>--->
 	<!-- PUEDE EJECUTARSE EN CUALQUIER PARTE ANTES/DENTRO/FUERA DEL BODY--->
 	<!---SCRIPT ANTES DEL BODY -  INTERNO -->
 	<script>
-		alert("este es mi primer mensaje alert entes de body");
+		//alert("este es mi primer mensaje alert entes de body");
 	</script>
 	<!---SCRIPT ANTES DEL BODY - FILE EXTERNO -->
 	
@@ -21,7 +21,7 @@
 <body>
 	<!---SCRIPT dentro DEL BODY -  INTERNO -->
 	<script>
-		alert("este es mi segundo mensaje alert dentro de body");
+		//alert("este es mi segundo mensaje alert dentro de body");
 	</script>
 	<hr>
 		<nav>
@@ -119,32 +119,43 @@
 		<section>
 			<h3>Prueba de ejecucion momento</h3>
 			<ul>
-				<li>Script dentro del HTML - script enbebido en medio del HTML - (INLIEN SCRIPT EARLY)
+				<li>Script dentro del HTML - script enbebido en medio del HTML - (INLIEN SCRIPT EARLY)<br> <!---modifica el documento al momento de ser llamado -->
 					<script>
 						document.write("Este es mi primer mensaje generado por document.write");
 						
 					</script>
 
 				</li>
-
-				<li>Script dentro de un control - Uso de los atributos en elementos HTML - (INLIEN EVENTOS HANDLER) 
-
-					<button onclick="alert('Script ejecutado dentro de un control (boton)')">Presione 1</button>
+				<!---*****************************************-->
+				<li>Script dentro de un control - Uso de los atributos en elementos HTML - (INLIEN EVENTOS HANDLER) <br>
+					<!--- Conocer los eventos o acciones del usuario --->
+					<button onclick="alert('Script ejecutado dentro de un control (boton)')">Presioname 1</button>
 				</li>
 
-				<li>Script al Final - (Inline Script Late)
-  					<button id="BtnPresioname2" ondblclick="mostrarAlert">Presioname 2</button>
-				</li>
+				<li>Script al Final - (Inline Script Late)<br>
+                    <button id="BtnPresioname2" onclick ="mostrarAlert()">Presioname 2</button> <br>
+					<!--se recomienda usar los id y no los llamados a funcion--->
 					
 				</li>
-				<li>Archivo externo (.js) - vinculado al HTML - (Extrenal Script)</li>
+					
+				
+				<li>Archivo externo (.js) - vinculado al HTML - (Extrenal Script) <br>
+					<button id="BtnPresioname3" >Presioname 3</button>
+					<p id="parrafo1">
+						Este parrafo fue escrito en HTML, las fuentes no deberian ser modificados desde el script
+					</p>
+
+					<!--Modificar el contenido de un boton-->
+					<br>
+					<button id="BtnPresioname4" >Presioname 4</button>
+				</li>
 			</ul>
 				
 		</section>
 
 
 		<section>
-			<h3>Metodos delacionados</h3>
+			<h3>Metodos relacionados</h3>
 			<ul>
 				<li></li>
 				<li> </li>
@@ -157,6 +168,8 @@
 
 		<section>
 			<h3>Eventos progamables Js dentro de una pag web</h3>
+			<h5> Eventsos de JAVASCRIPT para paginas web</h5>
+			<h6>Tarea Final: implementar un ejemplo para cada evento enlistado</h6>
 			<ul>
 				<li>load
 					<p>Definicion: El evento que se dispara cuando toda la página ha terminado de cargar completamente, incluyendo imágenes, estilos y scripts.<br>
@@ -244,9 +257,13 @@
 	</footer>
 	<!---SCRIPT dentro DEL BODY -  INTERNO -->
 	<script>
-		alert("este es mi tercer mensaje alert despues de body");
+		//alert("este es mi tercer mensaje alert despues de body");
 		document.write("Este es mi primer mensaje generado por document.write");
+		function mostrarAlert() {
+			alert("Este mensaje se muestra al presionar el boton> presioname 2");
+		}
 	</script>
+	<script src="../Js/JavaScript.js"></script>
 	<hr>
 	
 </body>
