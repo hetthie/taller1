@@ -1,0 +1,10 @@
+.notaUso {
+    font-size: 18px;
+    color: #e13a3a;
+    background-color: #c39d9d;
+    margin-top: 10px;
+    border-left: #e13a3a 10px solid;
+    border-radius: 10px;
+    padding: 2% 1% 2% 1%;
+    width: 90%;    
+}

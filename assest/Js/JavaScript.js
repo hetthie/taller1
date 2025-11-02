@@ -61,26 +61,28 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
 });
-
+/**************************************** */ 
 window.addEventListener('load', function() {
     console.log("¡Todo listo!");
     
     const statusCarga = document.getElementById('statusLoad');
-    statusCarga.textContent = "hola";
+    statusCarga.textContent = "contenido cargado";
     
 });
 
 
-// ADVERTENCIA (muestra el diálogo genérico del navegador)
+/**************************************** */ 
 window.addEventListener('beforeunload', function(e) {
     e.preventDefault();
     e.returnValue = '';
 });  
 
+/**************************************** */ 
 window.addEventListener('unload', function() {
     console.log("Evento unload ejecutado (puede que no lo veas)");
-    //descargarArchivo();
+    descargarArchivo();
 });
+
 
 function descargarArchivo() {
     let contenido = "Contenido de prueba para el unload.";
@@ -93,6 +95,7 @@ function descargarArchivo() {
     URL.revokeObjectURL(url);
 }
 
+/**************************************** */ 
 let contador = 0;
 document.addEventListener('visibilitychange', function() {
     const pVisibility = document.getElementById("Pvisibilitychange");
@@ -106,115 +109,111 @@ document.addEventListener('visibilitychange', function() {
         
     }
 });
+
+
+/**************************************** */ 
 document.addEventListener('readystatechange', function() {
     console.log('Estado actual:', document.readyState);
+    const estadoP = document.getElementById("idreadystatechange");
     
     if (document.readyState === 'loading') {
-        console.log(' Documento cargando');
+        estadoP.textContent = 'La página se está cargando';
     }
     else if (document.readyState === 'interactive') {
-        console.log('DOM listo, recursos aún cargando');
+        estadoP.textContent = 'DOM listo, recursos aún cargando';
     }
     else if (document.readyState === 'complete') {
-        console.log('Todo completamente cargado');
+        estadoP.textContent = 'La página está completamente cargada';
     }
 });
 
+
+/**************************************** */ 
 document.addEventListener('selectionchange', function() {
+
     let textoSeleccionado = window.getSelection().toString();
+    const idSeleccion = document.getElementById('idSeleccion');
     console.log('Texto seleccionado:', textoSeleccionado);
+    idSeleccion.textContent = `Texto seleccionado: ${textoSeleccionado}`;
 });
-/*
+
+let estado = document.getElementById('estado');
+
+document.getElementById('btn').onclick = function() {
+    document.body.requestFullscreen();
+};
+
 document.addEventListener('fullscreenchange', function() {
     if (document.fullscreenElement) {
-        console.log('✅ Entraste a pantalla completa');
-        console.log('Elemento:', document.fullscreenElement);
+        console.log('Entraste a pantalla completa');
+        estado.textContent = 'Estado: PANTALLA COMPLETA';
+        estado.style.color = 'green';
+        estado.style.fontSize = '30px';
     } else {
-        console.log('❌ Saliste de pantalla completa');
+        console.log('Saliste de pantalla completa');
+        estado.textContent = 'Estado: Normal';
+        estado.style.color = 'red';
+        estado.style.fontSize = '20px';
     }
 });
 
 document.addEventListener('fullscreenerror', function() {
-    console.error('❌ Error: No se pudo entrar a pantalla completa');
-    alert('No se puede activar pantalla completa en este momento');
-});*/
-        let estado = document.getElementById('estado');
+    console.error(' ERROR: No se pudo activar');
+    estado.textContent = 'Estado: ERROR';
+    estado.style.color = 'red';
+});
 
-        document.getElementById('btn').onclick = function() {
-            document.body.requestFullscreen();
-        };
+let info = document.getElementById('info');
+let texto = document.getElementById('texto');
 
-        document.addEventListener('fullscreenchange', function() {
-            if (document.fullscreenElement) {
-                console.log('✅ Entraste a pantalla completa');
-                estado.textContent = 'Estado: ✅ PANTALLA COMPLETA';
-                estado.style.color = 'green';
-                estado.style.fontSize = '30px';
-            } else {
-                console.log('❌ Saliste de pantalla completa');
-                estado.textContent = 'Estado: ❌ Normal';
-                estado.style.color = 'red';
-                estado.style.fontSize = '20px';
-            }
-        });
 
-        document.addEventListener('fullscreenerror', function() {
-            console.error('🔴 ERROR: No se pudo activar');
-            estado.textContent = 'Estado: 🔴 ERROR';
-            estado.style.color = 'red';
-        });
-
-        let info = document.getElementById('info');
-        let texto = document.getElementById('texto');
 
 texto.addEventListener('copy', function(e) {
-            info.innerHTML += '<p>📋 COPY - Copiaste texto</p>';
-            console.log('Texto copiado:', window.getSelection().toString());
-        });
+    info.innerHTML += '<p>Copiaste texto</p>';
+    console.log('Texto copiado:', window.getSelection().toString());
+});
 
-        texto.addEventListener('cut', function(e) {
-            info.innerHTML += '<p>✂️ CUT - Cortaste texto</p>';
-            console.log('Texto cortado:', window.getSelection().toString());
-        });
+texto.addEventListener('cut', function(e) {
+    info.innerHTML += '<p>Cortaste texto</p>';
+    console.log('Texto cortado:', window.getSelection().toString());
+});
 
-        texto.addEventListener('paste', function(e) {
-            info.innerHTML += '<p>📌 PASTE - Pegaste texto</p>';
-            console.log('Texto pegado:', e.clipboardData.getData('text'));
-        });
-
-
-
-
-        let juego = document.getElementById('juego');
-        let estadoPointer = document.getElementById('estado');
-
-        // Activar pointer lock al hacer clic
-        juego.addEventListener('click', function() {
-            juego.requestPointerLock();
-        });
-
-        // Detectar cambios en pointer lock
-        document.addEventListener('pointerlockchange', function() {
-            if (document.pointerLockElement === juego) {
-                estadoPointer.textContent = '🔒 Estado: Cursor BLOQUEADO (presiona ESC para salir)';
-                estadoPointer.style.color = 'green';
-                juego.style.background = 'lightgreen';
-                juego.innerHTML = '<p>Cursor bloqueado! Mueve el mouse</p>';
-            } else {
-                estadoPointer.textContent = '🔓 Estado: Cursor LIBRE';
-                estadoPointer.style.color = 'red';
-                juego.style.background = 'lightblue';
-                juego.innerHTML = '<p>Haz clic aquí para bloquear el cursor</p>';
-            }
-        });
+texto.addEventListener('paste', function(e) {
+    info.innerHTML += '<p>Pegaste texto</p>';
+    console.log('Texto pegado:', e.clipboardData.getData('text'));
+});
 
 
 
 
-        let contadorScroll = 0;
 
-        window.addEventListener('scroll', function() {
-            contador++;
-            document.getElementById('posY').textContent = window.scrollY;
-            document.getElementById('contador').textContent = contadorScroll;
-        });
+/**************************************** */ 
+let juego = document.getElementById('juego');
+let estadoPointer = document.getElementById('estado');
+
+juego.addEventListener('click', function() {
+    juego.requestPointerLock();
+});
+document.addEventListener('pointerlockchange', function() {
+    if (document.pointerLockElement === juego) {
+        estadoPointer.textContent = 'Cursor BLOQUEADO (presiona ESC para salir)';
+        estadoPointer.style.color = 'green';
+        juego.style.background = 'lightgreen';
+        juego.innerHTML = '<p>Cursor bloqueado! Mueve el mouse</p>';
+    } else {
+        estadoPointer.textContent = 'Cursor LIBRE';
+        estadoPointer.style.color = 'red';
+        juego.style.background = 'lightblue';
+        juego.innerHTML = '<p>Haz clic aquí para bloquear el cursor</p>';
+    }
+});
+
+
+
+/**************************************** */ 
+let contadorScroll = 0;
+
+window.addEventListener('scroll', function() {
+    contadorScroll++;
+    document.getElementById('contador').textContent = contadorScroll;
+});
