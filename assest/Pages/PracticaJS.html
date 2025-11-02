@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Practicas JavaScript</title>
 	<link rel= "icon" href= "../img/icon/Pokemon/Abra.ico" >
+	<link rel="stylesheet" href="../Css/practicajs.css">
 	<!---<script src="../Js/JavaScript.js"></script>--->
 	<!-- PUEDE EJECUTARSE EN CUALQUIER PARTE ANTES/DENTRO/FUERA DEL BODY--->
 	<!---SCRIPT ANTES DEL BODY -  INTERNO -->
@@ -197,8 +198,11 @@
 
 		<section>
 			<h3>Eventos progamables Js dentro de una pag web</h3>
-			<h5> Eventsos de JAVASCRIPT para paginas web</h5>
+			<h5> Eventos de JAVASCRIPT para paginas web</h5>
 			<h6>Tarea Final: implementar un ejemplo para cada evento enlistado</h6>
+			<section class="notaUso">
+    			<span>ADVERTENCIA: AQUI SE ENCUENTRA CONTENIDO DE EVETNOS JS LEER CON CUIDADO</span>
+			</section>
 			<ul>
 				<li>load
 					<p>Definicion: El evento que se dispara cuando toda la página ha terminado de cargar completamente, incluyendo imágenes, estilos y scripts.<br>
@@ -206,6 +210,11 @@
 						Funciona como: Un indicador de que la página está completamente cargada y lista para interactuar.<br>
 						Se hace: window.addEventListener('load', function() { /* código */ });<br>
 						No se hace: Confundirlo con DOMContentLoaded (que se dispara antes, solo cuando el HTML está parseado).<br>
+						<section class="notaUso">
+    						<span>Contenido load: <br>cambia de esperando a carga realizada</span>
+						</section>
+						<div id="statusLoad" class="status">Esperando</div>
+						
 					</p>
 				</li>
 				<li>unload
@@ -215,6 +224,10 @@
 						Se hace: window.addEventListener('unload', function() { /* limpieza */ });<br>
 						No se hace: Intentar prevenir que el usuario salga de la página o mostrar alertas (no es confiable en navegadores modernos).<br>
 					</p>
+					<section class="notaUso">
+    					<span>Contenido unload:<br> Al salir de la paguina, se hara la descarga de un archivo .txt el cual esta vacio y es muestra de este ejemplo.</span>
+					</section>
+					
 				</li>
 				<li>beforeunload
 					<p>Definicion: El evento que se dispara justo antes de que la página se descargue, permitiendo advertir al usuario.<br>
@@ -223,6 +236,10 @@
 						Se hace: window.addEventListener('beforeunload', function(e) { e.preventDefault(); e.returnValue = ''; });<br>
 						No se hace: Personalizar el mensaje (los navegadores modernos usan mensajes predeterminados por seguridad).<br>
 					</p>
+					<section class="notaUso">
+    					<span>Contenido beforeunload:<br> realizar interacciones con la paguina para observar el mensaje al cerrar la paguina o cambiar a otra.</span>
+					</section>
+					
 				</li>
 				<li>visibilitychange
 					<p>Definicion: El evento que se dispara cuando la pestaña o ventana del navegador cambia entre visible y oculta.<br>
@@ -231,6 +248,10 @@
 						Se hace: document.addEventListener('visibilitychange', function() { if(document.hidden) { /* pausar */ } });<br>
 						No se hace: Usarlo para rastrear usuarios de forma invasiva o para bloquear funcionalidad cuando la pestaña está oculta.<br>
 					</p>
+					<section class="notaUso">
+    					<span>Contenido visibilitychange:<br> muesta un contador con las salidas que ha realizado el usuario de esta pagina.</span>
+					</section>
+					<p id ="Pvisibilitychange"> El usuario ha salido 0 veces</p>
 				</li>
 				<li>readystatechange
 					<p>Definicion: El evento que se dispara cuando el estado de carga del documento cambia (loading, interactive, complete).<br>
@@ -239,6 +260,10 @@
 						Se hace: document.addEventListener('readystatechange', function() { console.log(document.readyState); });<br>
 						No se hace: Usarlo en lugar de DOMContentLoaded o load para casos simples (es más complejo de lo necesario).<br>
 					</p>
+					<section class="notaUso">
+    					<span>Contenido readystatechange:<br> indica en que estado de caga se encuentra la paguina.</span>
+					</section>
+					<p id ="idreadystatechange"> -----</p>
 				</li>
 				<li>selectionchange + fullscreenchange + fullscreenerror
 					<p>Definicion: Eventos relacionados con la selección de texto, cambios de pantalla completa y errores de pantalla completa.<br>
@@ -247,6 +272,15 @@
 						Se hace: document.addEventListener('selectionchange', function() { /* código */ }); document.addEventListener('fullscreenchange', function() { /* código */ });<br>
 						No se hace: Abusar de selectionchange (se dispara frecuentemente), ni forzar pantalla completa sin interacción del usuario.<br>
 					</p>
+					<section class="notaUso">
+    					<span>Contenido selectionchange + fullscreenchange + fullscreenerror:<br>.
+						Te permite visualizar el texto escogido en cada momento.<br>
+						Te permite cambiar a pantalla completa y ver el estado actual.<br>
+						</span>
+					</section>
+					<p id="idSeleccion">-------------</p>
+					<button id="btn">Pantalla Completa</button>
+					<p id="estado">Estado: Normal</p>
 				</li>
 				<li>copy, cut, paste
 					<p>Definicion: Eventos que se disparan cuando el usuario copia, corta o pega contenido en la página.<br>
@@ -255,6 +289,11 @@
 						Se hace: document.addEventListener('copy', function(e) { e.clipboardData.setData('text/plain', 'texto personalizado'); e.preventDefault(); });<br>
 						No se hace: Bloquear completamente estas acciones (frustra a los usuarios) o robar información del portapapeles sin consentimiento.<br>
 					</p>
+					<section class="notaUso">
+    					<span>Contenido copy, cut, paste: <br>te permite conocer el las acciones realizadas, si copiaste, pegaste o cortaste.</span>
+					</section>
+					<textarea id="texto" rows="5" cols="50">Selecciona y copia/corta/pega este texto</textarea>
+    				<div id="info"></div>
 				</li>
 				<li>pointerlockchange
 					<p>Definicion: El evento que se dispara cuando el cursor del mouse es bloqueado o desbloqueado en un elemento.<br>
@@ -263,6 +302,13 @@
 						Se hace: document.addEventListener('pointerlockchange', function() { if(document.pointerLockElement) { /* bloqueado */ } });<br>
 						No se hace: Bloquear el puntero sin una clara indicación al usuario o sin proporcionar una forma fácil de salir.<br>
 					</p>
+					<section class="notaUso">
+    					<span>Contenido pointerlockchange:<br>bloquea el curso para ejemplificar.</span>
+					</section>
+					<div id="juego">
+        				<p>Haz clic aquí para bloquear el cursor</p>
+    				</div>
+    				<p id="estado">Estado: Normal</p>
 				</li>
 				<li>scroll
 					<p>Definicion: El evento que se dispara cuando el usuario desplaza la página o un elemento con scroll.<br>
@@ -271,6 +317,13 @@
 						Se hace: document.addEventListener('scroll', function() { /* código con throttling/debouncing */ });<br>
 						No se hace: Ejecutar operaciones pesadas sin optimización (usar throttle o debounce), ya que se dispara muy frecuentemente.<br>
 					</p>
+					<section class="notaUso">
+    					<span>Contenido scroll: <br>indica las veces que se ha scrolleado en pantalla.</span>
+					</section>
+					<div id="info">
+        				Veces scrolleado: <span id="contador">0</span>
+					</div>
+    
 				</li>
 			</ul>
 				
