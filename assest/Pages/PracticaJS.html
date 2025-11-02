@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Practicas JavaScript</title>
 	<link rel= "icon" href= "../img/icon/Pokemon/Abra.ico" >
+	<link rel="stylesheet" href="../Css/Estilos.css">
 	<!---<script src="../Js/JavaScript.js"></script>--->
 	<!-- PUEDE EJECUTARSE EN CUALQUIER PARTE ANTES/DENTRO/FUERA DEL BODY--->
 	<!---SCRIPT ANTES DEL BODY -  INTERNO -->
@@ -206,6 +207,7 @@
 						Funciona como: Un indicador de que la página está completamente cargada y lista para interactuar.<br>
 						Se hace: window.addEventListener('load', function() { /* código */ });<br>
 						No se hace: Confundirlo con DOMContentLoaded (que se dispara antes, solo cuando el HTML está parseado).<br>
+						<div id="statusLoad" class="status">Esperando carga completa...</div>
 					</p>
 				</li>
 				<li>unload
@@ -223,6 +225,7 @@
 						Se hace: window.addEventListener('beforeunload', function(e) { e.preventDefault(); e.returnValue = ''; });<br>
 						No se hace: Personalizar el mensaje (los navegadores modernos usan mensajes predeterminados por seguridad).<br>
 					</p>
+					
 				</li>
 				<li>visibilitychange
 					<p>Definicion: El evento que se dispara cuando la pestaña o ventana del navegador cambia entre visible y oculta.<br>
@@ -231,6 +234,7 @@
 						Se hace: document.addEventListener('visibilitychange', function() { if(document.hidden) { /* pausar */ } });<br>
 						No se hace: Usarlo para rastrear usuarios de forma invasiva o para bloquear funcionalidad cuando la pestaña está oculta.<br>
 					</p>
+					<p id ="Pvisibilitychange"> El usuario ha salido 0 veces</p>
 				</li>
 				<li>readystatechange
 					<p>Definicion: El evento que se dispara cuando el estado de carga del documento cambia (loading, interactive, complete).<br>
@@ -247,6 +251,8 @@
 						Se hace: document.addEventListener('selectionchange', function() { /* código */ }); document.addEventListener('fullscreenchange', function() { /* código */ });<br>
 						No se hace: Abusar de selectionchange (se dispara frecuentemente), ni forzar pantalla completa sin interacción del usuario.<br>
 					</p>
+					<button id="btn">Pantalla Completa</button>
+					<p id="estado">Estado: Normal</p>
 				</li>
 				<li>copy, cut, paste
 					<p>Definicion: Eventos que se disparan cuando el usuario copia, corta o pega contenido en la página.<br>
@@ -255,6 +261,8 @@
 						Se hace: document.addEventListener('copy', function(e) { e.clipboardData.setData('text/plain', 'texto personalizado'); e.preventDefault(); });<br>
 						No se hace: Bloquear completamente estas acciones (frustra a los usuarios) o robar información del portapapeles sin consentimiento.<br>
 					</p>
+					<textarea id="texto" rows="5" cols="50">Selecciona y copia/corta/pega este texto</textarea>
+    <div id="info"></div>
 				</li>
 				<li>pointerlockchange
 					<p>Definicion: El evento que se dispara cuando el cursor del mouse es bloqueado o desbloqueado en un elemento.<br>
@@ -263,6 +271,10 @@
 						Se hace: document.addEventListener('pointerlockchange', function() { if(document.pointerLockElement) { /* bloqueado */ } });<br>
 						No se hace: Bloquear el puntero sin una clara indicación al usuario o sin proporcionar una forma fácil de salir.<br>
 					</p>
+					<div id="juego">
+        <p>Haz clic aquí para bloquear el cursor</p>
+    </div>
+    <p id="estado">Estado: Normal</p>
 				</li>
 				<li>scroll
 					<p>Definicion: El evento que se dispara cuando el usuario desplaza la página o un elemento con scroll.<br>
@@ -271,6 +283,11 @@
 						Se hace: document.addEventListener('scroll', function() { /* código con throttling/debouncing */ });<br>
 						No se hace: Ejecutar operaciones pesadas sin optimización (usar throttle o debounce), ya que se dispara muy frecuentemente.<br>
 					</p>
+					<div id="info">
+        Posición Y: <span id="posY">0</span>px<br>
+        Veces scrolleado: <span id="contador">0</span>
+    </div>
+    <p>Desplázate hacia abajo...</p>
 				</li>
 			</ul>
 				
