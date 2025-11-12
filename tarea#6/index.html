@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name ="viewport" content ="width= device-width , initial-scale = 1.0">
+        <meta name=" description" content=" Tarea #6 - Controles_Formularios HTML">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="andie">
+        <title>Página Tarea #4</title>
+       
+        <link rel="stylesheet" href="assets/Css/styles.css">
+
+    </head>
+
+    <body>
+        <header>
+            <img src="assets/img/logoPersonal.png" alt="logoPersonalAndie" id="logo">
+            <h1>Tarea #6 </h1>
+            <h2>Controles_Formularios HTML</h2>
+        </header>
+
+        <main>
+            <nav id="idDatosEspol"><!-- Menú de navegación (nav) con al menos 4 enlaces. -->
+       
+            <a href="https://www.espol.edu.ec/es">Espol</a>
+            <a href="https://www.fiec.espol.edu.ec/es">FIEC</a>
+            <a href="https://www.fiec.espol.edu.ec/es/proyectos">Proyectos FIEC</a>
+            <a href="https://www.fiec.espol.edu.ec/es/noticias">Noticias FIEC</a>
+       
+    </nav>
+    <h3 class="subtitulo">Conoce más:</h3>
+
+    <span class="contenedor">
+
+            <section id="idEspol" class="Descripcion">
+            <h3>ESPOL</h3>
+            <p class = "contenidoDesc">La ESPOL es una institución líder en
+                educación superior, investigación e innovación, comprometida con la formación
+                de profesionales que impulsan el desarrollo científico y tecnológico del país.</p>
+                <button class="btn"> Cambia Fondo</button>
+                <button class="btnCont"> Cambia contenido</button>
+            </section>
+
+            <section id="idFiec" class=" Descripcion">
+            <h3>FIEC</h3>
+            <p class = "contenidoDesc">Facultad de Ingeniería en
+                Electricidad y Computación, reconocida por
+                su excelencia académica, innovación tecnológica y formación
+                de profesionales líderes en ingeniería y ciencias computacionales.</p>
+                <button class="btn"> Cambia Fondo</button>
+                <button class="btnCont"> Cambia contenido</button>
+            </section>
+   
+            <section id="idPFiec" class="Descripcion">
+            <h3>Proyectos FIEC</h3>
+            <p class = "contenidoDesc">La ESPOL impulsa proyectos de
+                investigación, innovación y emprendimiento
+                que integran tecnología, sostenibilidad y desarrollo
+                social para transformar el país.</p>
+                <button class="btn"> Cambia Fondo</button>
+                <button class="btnCont"> Cambia contenido</button>
+            </section>
+
+            <section id="idNoticiasFiec" class="Descripcion">
+            <h3>Noticias FIEC</h3>
+            <p class = "contenidoDesc">La ESPOL impulsa proyectos de
+                investigación, innovación y emprendimiento
+                que integran tecnología, sostenibilidad y desarrollo
+                social para transformar el país.</p>
+                <button class="btn"> Cambia Fondo</button>
+                <button class="btnCont"> Cambia contenido</button>
+            </section>
+    </span>      
+
+    <h2>Adiciona qué es lo que te parece interesante de nosotros:</h2>
+    <ul>
+        <li>Conocimiento</li>
+       
+    </ul>
+    <button id="btonLista">Indícanos</button>
+
+    <input type="text" id="campoTexto" class="campoTexto" placeholder="Ejemplo: Malla curricular">
+
+
+
+    <h2>Escribe en tiempo real:</h2>
+    <input type="text" id="campoInteractivo" placeholder="Escribe algo aquí">
+    <p id="areaVisualizacion" ></p>
+
+    <h1>Te invitamos a usar nuestra calculadora!</h1>
+    <div>
+        <input type="number" id="num1" placeholder="Número 1" class="campoTexto">
+        <br>
+        <input type="number" id="num2" placeholder="Número 2" class="campoTexto">
+    </div>
+
+    <div>
+        <button onclick="calcular('suma')" class="btnGenral">Sumar</button>
+        <button onclick="calcular('resta')" class="btnGenral">Restar</button>
+        <button onclick="calcular('multiplicacion')" class="btnGenral">Multiplicar</button>
+        <button onclick="calcular('division')"class="btnGenral">Dividir</button>
+    </div>
+   
+    <div id="resultado"></div>
+
+
+    <h1 >Crea tu cuenta ESPOL para acceder a más servicios:</h1>
+    <fieldset>
+            <form id="frmDatos" name="frmDatos">
+                <legend for="TxtNombre" class ='textoGeneral'>Datos del usuario</legend>
+                <label class ='textoGeneral'>Nombres</label>    
+                <input type="text" id="TxtNombre" name="TxtNombre" placeholder="Ingrese su nombre" required  class="campoTexto"> </input>
+                <br>
+               
+               
+                <label for="TxtApellido" class ='textoGeneral'>Apellidos</label>    
+                <input type="text" id="TxtApellido" name="TxtApellido" placeholder="Ingrese su apellido" required  class="campoTexto"> </input>
+                <br>
+               
+                <label for ="email" class ='textoGeneral'>Email</label>
+                <input type="email" id="email" name="email" placeholder="Ingrese su email" required  class="campoTexto"> </input>
+                <br>
+                <label for ="passwordUS" class ='textoGeneral'>Contraseña</label>  
+                <input type="password" id="passwordUS" name="passwordUS" placeholder="Ingrese su contraseña" required  class="campoTexto"> </input>
+               
+                <br>
+                <label for="fechaNacimiento" class ='textoGeneral'>Fecha de Nacimiento</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required class="campoTexto" >
+                <br>
+               
+                <button type="submit" id="btnEnviar" name="btnEnviar" class="btnGenral">Enviar</button>
+            </form>
+        </fieldset>
+
+
+        <h1>Calculadora de Diferencia de Fechas</h1>
+        <fieldset>
+            <legend class ='textoGeneral'>Calcula los días entre dos fechas</legend>
+           
+            <label for="fecha1" class ='textoGeneral'>Primera Fecha:</label>
+            <input type="date" id="fecha1" name="fecha1" required class="campoTexto" >
+            <br><br>
+            <label for="fecha2" class ='textoGeneral'>Segunda Fecha:</label>
+            <input type="date" id="fecha2" name="fecha2" required class="campoTexto" >
+            <br><br>
+           
+            <button type="button" id="btnCalcularDias" class="btnGenral">Calcular Diferencia</button>
+            <br><br>
+           
+            <div id="resultadoFechas"></div>
+        </fieldset>
+        </main>
+
+        <footer>
+            <p>&copy Andie Barreno</p>
+        </footer>
+        <script src="assets/Js/JavaScript.js"></script>
+    </body>
+</html>

@@ -1,0 +1,251 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color:rgb(155, 208, 222);
+
+}
+
+#logo{
+    width:150px;
+    display: block;
+    margin: 0 auto;
+}
+
+nav#idDatosEspol{
+    background-color:rgb(70, 130, 180);
+    padding:15px;
+    border-radius:10px;
+    text-align: center;
+    width: 100%;
+}
+
+nav a{
+    margin:0 20px;
+    color:white;
+    font-size: 20px;
+
+}
+
+nav a:hover{
+    color:rgb(200, 200, 200);
+    font-weight: bold;
+}
+
+.subtitulo{
+    position: sticky;/*sticky (por ejemplo, un subtítulo que se mantenga pegado al hacer scroll).*/
+    top: 250px;
+    background-color: #add8e6;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    z-index: 100;
+    border-radius: 15px;
+    width:100%;
+}
+
+main {
+    margin-top: 250px;
+    align-items: center;
+    margin-bottom: 100px;
+
+}
+header{
+    position: fixed;/*Cree un encabezado fijo (fixed) en la parte superior.*/
+    background-color:rgb(233, 230, 230);
+    top: 0;
+    left: 0;
+    width:100%;
+    text-align: center;
+    z-index: 100;
+    height: 249px;
+}
+
+.Descripcion{
+    box-shadow: 0 0 12px rgb(0, 0, 0) ;/*box-shadow en al menos dos elementos.*/
+    border:solid 2px black;
+    background-color:rgb(203, 224, 229);
+    width:100%;
+    padding: 40px 5%;
+    margin:20px 20px;
+    border-radius:15px;/*border-radius en al menos dos elementos.*/
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;/*Use al menos un elemento con position: relative (por ejemplo, una tarjeta contenedora).*/
+    transition: background-color 0.5s ease, box-shadow 0.4s ease,transform 2s ease;/*transition en al menos dos elementos.*/
+}
+.Descripcion:hover{/*:hover sobre tarjetas o enlaces para cambiar color, tamaño o fondo.*/
+    box-shadow: 0 0 20px rgb(0, 0, 0) ;
+    background-color: white;
+    transform:scale(1.01);
+}
+.textoGeneral{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+    font: 15px;
+    font-weight: bold;
+}
+
+.btn{
+    position: absolute;/* absolute (por ejemplo, un botón o ícono flotante dentro de la tarjeta).*/
+    bottom: 8px; /* 10px desde abajo */
+    right: 10px;
+    border-radius:12px;
+    background-color:rgb(70, 70, 239);
+    color:white;
+    height: 40px;
+    width: 100px;
+}
+
+.btnCont{
+    position: absolute;/* absolute (por ejemplo, un botón o ícono flotante dentro de la tarjeta).*/
+    bottom: 8px; /* 10px desde abajo */
+    right: 125px;
+    border-radius:12px;
+    background-color:rgb(70, 70, 239);
+    color:white;
+    height: 40px;
+    width: 100px;
+}
+
+.btnGenral{
+    
+    border-radius:12px;
+    background-color:rgb(70, 70, 239);
+    color:white;
+    height: 40px;
+    width: 100px;
+}
+#btonLista{
+    
+    border-radius:12px;
+    background-color:rgb(70, 70, 239);
+    color:white;
+    height: 40px;
+    width: 100px;
+}
+
+.campoTexto{
+    border-radius:12px;
+    height: 40px;
+    width: 60%;
+    margin: 10px 30px;
+    right: 10px;
+}
+.btn:hover{/*:hover sobre tarjetas o enlaces para cambiar color, tamaño o fondo.*/
+    background-color:rgb(6, 6, 126);
+}
+.btnCont:hover{/*:hover sobre tarjetas o enlaces para cambiar color, tamaño o fondo.*/
+    background-color:rgb(6, 6, 126);
+}
+#btonLista:hover{/*:hover sobre tarjetas o enlaces para cambiar color, tamaño o fondo.*/
+    background-color:rgb(6, 6, 126);
+}
+
+.Descripcion h3{
+    text-align: justify;
+    font-size:18px;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(4, 5fr);
+    gap: 20px;
+}
+
+#campoInteractivo{
+    border-radius:12px;
+    height: 40px;
+    width: 60%;
+}
+
+#areaVisualizacion{
+    border-radius:12px;
+    height: 40px;
+    width: 60%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+footer{
+    position: fixed;   /* Fijo en pantalla */
+    bottom: 0;         
+    left: 0;
+    width: 100%;       
+    background-color:rgb(233, 230, 230);
+    color: rgb(53, 14, 139);
+    text-align: center;
+    padding: 10px 0;
+}
+/**********************************Contenido de brakpoints************************************/
+
+@media (max-width: 1200px) { 
+    body { 
+        background-color: rgb(152, 173, 179); 
+    } 
+    .contenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 5fr);
+    gap: 20px;
+}
+} 
+
+@media (max-width: 992px) {
+    body { 
+        background-color: rgb(99, 192, 224); 
+    }
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(2, 5fr);
+        gap: 20px; 
+    } 
+}
+
+@media (max-width: 768px) { 
+    body { 
+        background-color: rgb(96, 169, 159); 
+    } 
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(1, 5fr);
+        gap: 20px; 
+    } 
+
+    nav#idDatosEspol {
+    display: flex;
+    flex-direction: column; /* Apila los enlaces uno sobre otro */
+    align-items: center;
+  }
+
+  nav#idDatosEspol a {
+    display: block;       
+    margin: 10px 0;       
+    font-size: 18px;     
+  }
+} 
+    
+
+
+@media (max-width: 480px) { 
+    body {
+        background-color: rgba(172, 127, 214, 0.688); 
+    } 
+    header h2,h1{
+        font-size: 18px;
+    }
+
+    header{
+        height: 200px;
+    }
+
+    .subtitulo{
+    top: 202px;
+    
+    }
+    main {
+    margin-top: 215px;
+    align-items: center;
+    
+}
+
+}
